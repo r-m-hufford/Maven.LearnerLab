@@ -20,7 +20,7 @@ public class InstructorTest {
     @Test
     public void testTeach() {
         Instructor instructor = new Instructor(42L, "teacher");
-        Student student = new Student(99L, "cheddar");
+        Student student = new Student(99L, "cheddar", 0.0);
         instructor.teach(student, 3);
 
         Double expected = 3.0;
@@ -33,10 +33,10 @@ public class InstructorTest {
     public void testLecture() {
         Instructor instructor = new Instructor(42L, "teacher");
         Student[] students = new Student[]{
-            new Student(1L, "cheddar"),
-            new Student(2L, "tony"),
-            new Student(3L, "basketball"),
-            new Student(4L, "gaddis")};
+            new Student(1L, "cheddar", 0.0),
+            new Student(2L, "tony", 0.0),
+            new Student(3L, "basketball", 0.0),
+            new Student(4L, "gaddis", 0.0)};
 
         instructor.lecture(students, 12);
 
