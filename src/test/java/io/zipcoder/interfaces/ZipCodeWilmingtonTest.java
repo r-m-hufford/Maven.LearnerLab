@@ -16,5 +16,4 @@ public class ZipCodeWilmingtonTest {
 
         //Assert.assertEquals(expected, actual);
     }
-
 }

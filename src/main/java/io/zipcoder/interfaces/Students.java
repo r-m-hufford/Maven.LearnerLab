@@ -6,10 +6,9 @@ import java.util.List;
 public class Students extends People<Student> {
 
     private static final Students INSTANCE = new Students();
-    private final List<Student> javaCohort;
+    private final List<Student> javaCohort = new ArrayList<Student>();
 
     private Students() {
-        this.javaCohort = new ArrayList<Student>();
         javaCohort.add(0, new Student(1L, "Justin", 10.0));
         javaCohort.add(1, new Student(2L, "Monali", 10.0));
         javaCohort.add(2, new Student(3L, "Gerg", 10.0));
@@ -42,11 +41,6 @@ public class Students extends People<Student> {
         }
 
     public Student[] toArray() {
-        Student[] peopleToArray = new Student[people.size()];
-
-        for (int i = 0; i < people.size(); i++) {
-            peopleToArray[i] = people.get(i);
-        }
-        return peopleToArray;
+        return javaCohort.toArray(new Student[javaCohort.size()]);
     }
 }

@@ -19,7 +19,8 @@ public class ZipCodeWilmington {
 
    public void hostLecture (Double numberOfHours) {
         Educator.YOUNGER.lecture(students.toArray(), numberOfHours);
-        System.out.println(Educator.YOUNGER.getTimeWorked());
+        for
+
     }
 
 
