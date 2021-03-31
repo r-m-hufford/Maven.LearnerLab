@@ -11,9 +11,10 @@ public class ZipCodeWilmingtonTest {
     public void hostLectureTest() {
         ZipCodeWilmington zip = new ZipCodeWilmington();
         zip.hostLecture(130.0);
-        zip.getStudyMap();
-        System.out.println(zip.studyMap.values());
 
-        //Assert.assertEquals(expected, actual);
+        Double expected = 20.0;
+        Double actual = zip.students.findById(2L).getTotalStudyTime();
+
+        Assert.assertEquals(expected, actual);
     }
 }
